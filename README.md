@@ -54,3 +54,7 @@ Chaque entrée correspond à un contrôle de `make doctor`.
 docker build -t kraken-bootstrap .
 docker run --rm kraken-bootstrap
 ```
+## Lancement en précisant le volume
+```bash
+docker run --rm -e OUTPUT_DIR=/out -v "$(pwd)/out:/out" kraken-bootstrap
+```
