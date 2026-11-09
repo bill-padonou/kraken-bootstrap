@@ -48,3 +48,13 @@ Chaque entrée correspond à un contrôle de `make doctor`.
   git config --global user.email "toi@exemple.fr"
   ```
 - **`make install` échoue** : `make doctor` exige Python ≥ 3.11 et les dépendances épinglées supportent Python 3.11 à 3.14. Vérifie `python3 --version`, ou utilise une version précise : `make install PYTHON=python3.12`.
+
+## Lancer avec Docker
+```bash
+docker build -t kraken-bootstrap .
+docker run --rm kraken-bootstrap
+```
+## Lancement en précisant le volume
+```bash
+docker run --rm -e OUTPUT_DIR=/out -v "$(pwd)/out:/out" kraken-bootstrap
+```
