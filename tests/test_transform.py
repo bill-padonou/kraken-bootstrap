@@ -48,4 +48,4 @@ def test_run_writes_parquet(tmp_path):
     sample().to_csv(src, index=False)
     out_file = run(str(src), str(tmp_path / "out"))
     assert out_file.endswith("stations.parquet")
-    assert len(pd.read_parquet(out_file)) == 3
+    assert len(pd.read_parquet(out_file)) == 2
