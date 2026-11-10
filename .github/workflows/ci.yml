@@ -37,6 +37,6 @@ jobs:
           docker build \
             -t ghcr.io/${{ github.repository_owner }}/kraken-bootstrap:${{ github.sha }} \
             --label org.opencontainers.image.revision=${{ github.sha }} \
-            --label org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }} \ .
+            --label org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }} .
       - if: github.ref == 'refs/heads/main'
         run: docker push ghcr.io/${{ github.repository_owner }}/kraken-bootstrap:${{ github.sha }}
