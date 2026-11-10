@@ -1,4 +1,3 @@
-name: ci
 on:
   push:
     branches: [main]
@@ -7,4 +6,4 @@ jobs:
   print_sha:
     runs-on: ubuntu-latest
     steps:
-      run: echo ${{ github.sha }}
+      - run: echo ${{ github.sha }}
