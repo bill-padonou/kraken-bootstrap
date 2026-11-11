@@ -11,4 +11,4 @@ COPY --chown=app:app . .
 
 USER app
 
-CMD ["python", "-m", "app.main.py"]
+CMD ["python", "-m", "app.main"]
